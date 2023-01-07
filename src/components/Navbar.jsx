@@ -17,7 +17,7 @@ const Navbar = () => {
     whileInView="show"
     className="w-full flex py-8 justify-between items-center relative navbar"
   >
-      <img src={logo} alt="joytech-Technologies" id="home"  className="w-[124px] h-[32px]" />
+      <img src={logo} alt="joytech-Technologies" id="home"  className="w-[150px] sm:w-[200px] h-[32px] sm:h-[50px]" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
