@@ -18,7 +18,7 @@ const Hero = () => {
           className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
         >
           <motion.div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
-            <img src={airplane} alt="airplane" className="w-[25px] h-[25px]" />
+            <img src={airplane} alt="airplane" className="sm:w-[45px] sm:h-[45px] w-[38px] h-[38px]" />
             <p className={`${styles.paragraph} ml-2`}>
               <span className="text-white">Best</span> Travel consultantion Services from the most trusted Agency{" "}
             </p>
@@ -45,9 +45,9 @@ const Hero = () => {
 
         <motion.div
           variants={fadeIn('left', 'tween', 0.2, 1)}
-          className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
+          className={`flex-1 flex ${styles.flexCenter}  md:my-0 my-10 relative`}
         >
-          <img src={laptop} alt="billing" className="w-[100%] h-[100%] relative px-[2px] z-[5]" />
+          <img src={laptop} alt="laptop" className="h:[180px] w:[160px] relative px-[2px] z-[5]" />
 
           {/* gradient start */}
           <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
