@@ -24,9 +24,11 @@ import people02 from "./people02.png";
 import people03 from "./people03.png";
 import laptop from "./laptop.png";
 import airplane from "./airplane.svg";
+import passport from "./passport.svg";
 
 export {
   airbnb,
+  passport,
   binance,
   card,
   coinbase,
