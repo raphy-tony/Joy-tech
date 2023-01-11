@@ -1,5 +1,6 @@
 import airbnb from "./airbnb.png";
-import bill from "./bill.png";
+// import passport from "./passport.png";
+import passport from "./passport.svg";
 import binance from "./binance.png";
 import card from "./card.png";
 import coinbase from "./coinbase.png";
@@ -28,7 +29,7 @@ import airplane from "./airplane.svg";
 
 export {
   airbnb,
-  bill,
+  passport,
   binance,
   card,
   coinbase,
