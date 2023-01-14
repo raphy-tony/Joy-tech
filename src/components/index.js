@@ -2,7 +2,6 @@ import Navbar from "./Navbar";
 import Visa from "./Visa";
 import Products from "./Products";
 import AboutUs from "./AboutUs";
-import Clients from "./Clients";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
@@ -14,7 +13,6 @@ export {
   Visa,
   Products,
   AboutUs,
-  Clients,
   ContactUs,
   Footer,
   Testimonials,

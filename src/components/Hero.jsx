@@ -20,7 +20,7 @@ const Hero = () => {
           <motion.div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
             <img src={airplane} alt="airplane" className="sm:w-[42px] sm:h-[42px] w-[32px] h-[32px]" />
             <p className={`${styles.paragraph} ml-2`}>
-              <span className="text-white">Best</span> Travel consultantion Services from the most trusted Agency{" "}
+              <span className="text-white">Best</span> Travel consultation Services from the most trusted Agency{" "}
             </p>
           </motion.div>
 
