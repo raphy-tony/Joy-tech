@@ -1,5 +1,9 @@
 import styles from "../style";
-import Button from "./Button";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { WhatsAppButtonGreenLarge } from "../assets";
+
+
 import { IoMdCall } from "react-icons/io";
 import { MdMail } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
@@ -7,7 +11,34 @@ import { FiInstagram } from "react-icons/fi";
 import { FaFacebook } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 
-const ContactUs = () => (
+const ContactUs = () =>{
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_u2o0v2t",
+        "template_yyarorn",
+        form.current,
+        "n1dTgPhZ8RR6SYM98"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+      event.target.reset()
+  };
+
+
+return(
   <section id="contact" className={`${styles.marginY} ${styles.padding} bg-black-gradient-2 rounded-[20px] box-shadow`}>
     <div className="flex flex-col md:flex-row justify-between md:space-y-0 space-y-6">
       <div className="flex flex-col space-y-8 justify-between">
@@ -21,7 +52,7 @@ const ContactUs = () => (
         </div>
 
       
-        <div className=" space-y-4 md:space-y-6  font-poppins text-white">
+        <div className=" cursor-pointer space-y-4 md:space-y-6  font-poppins text-white">
           <div className="flex space-x-4 items-center">
             <IoMdCall className=" text-[25px]"/>
             <span>+254 759 663 648</span>
@@ -38,8 +69,9 @@ const ContactUs = () => (
           </div>
         </div>
 
-        <a href="http://"></a>
-
+        <a aria-label="Chat on WhatsApp" target="blank" href="https://wa.me/759663648">
+          <img alt="Chat on WhatsApp" src={WhatsAppButtonGreenLarge} />
+        </a>  
 
         <div className="flex space-x-4 text-lg text-white">
           <a href="https://www.instagram.com">
@@ -60,23 +92,23 @@ const ContactUs = () => (
       
     <div className="font-poppins">
       <div className="bg-white shadow-lg p-8 rounded-xl">
-        <form action="" method="post" className="flex flex-col space-y-4">
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4">
           <div>
-            <label htmlFor="" className="text-sm">Your Name</label>
-            <input type="text" placeholder="Your Name" className="ring-1 mt-2 ring-gray-300 w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-teal-300" />
+            <label  className="text-sm">Your Name</label>
+            <input type="text" name="name" placeholder="Your Name" className="ring-1 mt-2 ring-gray-300 w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-teal-300" />
           </div>
 
           <div>
-            <label htmlFor="" className="text-sm">Your Email</label>
-            <input type="email" placeholder="Email Address" className="ring-1 mt-2 ring-gray-300 w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-teal-300" />
+            <label className="text-sm">Your Email</label>
+            <input type="email" name="email" placeholder="Email Address" className="ring-1 mt-2 ring-gray-300 w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-teal-300" />
           </div>
 
           <div>
-            <label htmlFor="" className="text-sm">Your Message</label>
-            <textarea type="message" placeholder="Your Message" rows={5} className="ring-1 mt-2 ring-gray-300 w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-teal-300" />
+            <label className="text-sm">Your Message</label>
+            <textarea type="message" name="message" placeholder="Your Message" rows={5} className="ring-1 mt-2 ring-gray-300 w-full px-4 py-2 rounded-md outline-none focus:ring-2 focus:ring-teal-300" />
           </div>
           
-          <button type="button" className={`py-2 px-6 self-end font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`}>
+          <button type="submit" className={`py-2 px-6 self-end font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`}>
             send Message
           </button>
         </form>
@@ -87,5 +119,8 @@ const ContactUs = () => (
     
   </section>
 );
+
+};
+
 
 export default ContactUs;

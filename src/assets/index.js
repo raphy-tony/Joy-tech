@@ -25,9 +25,11 @@ import people03 from "./people03.png";
 import laptop from "./laptop.png";
 import airplane from "./airplane.svg";
 import passport from "./passport.svg";
+import WhatsAppButtonGreenLarge from "./WhatsAppButtonGreenLarge.svg";
 
 export {
   airbnb,
+  WhatsAppButtonGreenLarge,
   passport,
   binance,
   card,
