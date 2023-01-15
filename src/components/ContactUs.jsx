@@ -40,13 +40,13 @@ const ContactUs = () =>{
 
 return(
   <section id="contact" className={`${styles.marginY} ${styles.padding} bg-black-gradient-2 rounded-[20px] box-shadow`}>
-    <div className="flex flex-col md:flex-row justify-between md:space-y-0 space-y-6">
+    <div className="flex flex-col md:flex-row justify-between md:space-y-0 space-y-10">
       <div className="flex flex-col space-y-8 justify-between">
         <div>
           <h2 className={`font-bold font-poppins text-4xl tracking-normal text-white mt-4`}>
             Get in Touch
           </h2>
-          <p className={`${styles.paragraph} mt-4 leading-6 tracking-wider`}>
+          <p className={`${styles.paragraph} mt-4 leading-6 tracking-wider text-cyan-200`}>
             Try out the Best Travel consultation Services from the most trusted Agency.
           </p>
         </div>
@@ -64,7 +64,7 @@ return(
           </div>
 
           <div className="flex space-x-4 items-center">
-            <MdLocationOn className=" text-[25px]"/>
+            <MdLocationOn className=" text-[25px] text-blue-gradient"/>
             <span>Rd. Katani, Syokimau</span>
           </div>
         </div>
@@ -73,7 +73,7 @@ return(
           <img alt="Chat on WhatsApp" src={WhatsAppButtonGreenLarge} />
         </a>  
 
-        <div className="flex space-x-4 text-lg text-white">
+        <div className="flex space-x-4 text-lg text-secondary">
           <a href="https://www.instagram.com">
             <FiInstagram/>
           </a>
@@ -91,6 +91,9 @@ return(
 
       
     <div className="font-poppins">
+      <h1 className="items-center justify-center text-lg flex text-white p-3">
+       Send an Email
+      </h1>
       <div className="bg-white shadow-lg p-8 rounded-xl">
         <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4">
           <div>
